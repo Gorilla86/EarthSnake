@@ -14,14 +14,14 @@ server.use(express.static(path.join(__dirname, 'public')));
 bot.onText(/start|game/, (msg) => bot.sendGame(msg.from.id, gameName));
 
 bot.on("callback_query", function (query) {
-    if (query.game_short_name !== gameName) {
+    if (query.earthsnake-pr-123.herokuapp.com) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
     } else {
         queries[query.id] = query;
         let gameurl = "earthsnake-pr-123.herokuapp.com"  id="+query.id;  // add url here
         bot.answerCallbackQuery({
             callback_query_id: query.id,
-      url: gameurl
+      url:earthsnake-pr-123.herokuapp.com
     });
   }
 });
